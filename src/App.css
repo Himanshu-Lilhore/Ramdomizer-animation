@@ -4,10 +4,12 @@ body{
   align-content: center;
   justify-content: center;
   user-select: none;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #lineHolder{
-  /* background-color: #242424; */
+  scale : 2;
   background-color: rgba(24, 24, 24, 0.9);
   align-content: center;
   justify-content: left;
