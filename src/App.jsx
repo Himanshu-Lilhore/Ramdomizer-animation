@@ -7,8 +7,12 @@ export default function App() {
 
   return (
     <>
-      <div id='holder'>
-        <WordShuffle>Himanshu</WordShuffle>
+      <div id='lineHolder'>
+        <WordShuffle myColor={'orange'}>About</WordShuffle>
+        <WordShuffle myColor={'lime'}>Projects</WordShuffle>
+        <WordShuffle myColor={'red'}>Resume</WordShuffle>
+        <WordShuffle myColor={'purple'}>Socials</WordShuffle>
+        <a id='author' href='https://github.com/Himanshu-Lilhore'># Himanshu Lilhore</a>
       </div>
     </>
   )
