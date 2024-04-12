@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 
-const abcd = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890+)(*&^%$#@!}{'
+let abcd = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890&%$#@'
 
 export default function WordShuffle({ children, myColor }) {
     let tempLst = []
     const [indvAlphaSpans, setSpans] = useState([])
     let original = children
-    const [isAnimating, setIsAnimating] = useState(false); // State to track animation status
+    const [isAnimating, setIsAnimating] = useState(false);
 
     useEffect(() => {
         for (let i = 0; i < children.length; i++) {
@@ -26,7 +26,7 @@ export default function WordShuffle({ children, myColor }) {
 
         for (let i = 0; i < children.length; i++){
             let x = setInterval(() => {
-                tempLst[i] = <span key={i} style={{color: myColor}}>{abcd[Math.floor(Math.random()*75)]}</span>
+                tempLst[i] = <span key={i} style={{color: myColor}}>{abcd[Math.floor(Math.random()*abcd.length)]}</span>
                 setSpans([...tempLst])
             }, 60)
             setTimeout(() => {
@@ -36,7 +36,7 @@ export default function WordShuffle({ children, myColor }) {
                 if (i === children.length - 1) {
                     setIsAnimating(false);
                 }
-            }, 200*(i+1))
+            }, 150*(i+1))
         }
     }
 

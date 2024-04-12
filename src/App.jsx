@@ -9,8 +9,8 @@ export default function App() {
       <div id='lineHolder'>
         <WordShuffle myColor={'orange'}>About</WordShuffle>
         <WordShuffle myColor={'lime'}>Projects</WordShuffle>
-        <WordShuffle myColor={'red'}>Resume</WordShuffle>
-        <WordShuffle myColor={'purple'}>Socials</WordShuffle>
+        <WordShuffle myColor={'#ff5252'}>Resume</WordShuffle>
+        <WordShuffle myColor={'#e246e2'}>Socials</WordShuffle>
         <a id='author' href='https://github.com/Himanshu-Lilhore'># Himanshu Lilhore</a>
       </div>
     </>
